@@ -63,7 +63,7 @@ func main() {
 		fmt.Println(k, v)
 	}
 
-	var chl chan int
+	// var chl chan int
 
 	//受信専用
 	// var ch2 <-chan int
@@ -71,7 +71,7 @@ func main() {
 	//送信専用
 	// var ch3 chan<- int
 
-	ch1 = make(chan int)
+	ch1 := make(chan int)
 
 	ch2 := make(chan int)
 
@@ -97,7 +97,7 @@ func main() {
 	fmt.Println("len", len(ch3))
 
 	ch3 <- 1
-	fmt.Println("len", len())
+	fmt.Println("len", len(ch3))
 	ch3 <- 2
 	ch3 <- 3
 	ch3 <- 4
